@@ -13,7 +13,7 @@ app.use(express.static("public"))
 
 const stripe = require("stripe")(stripeSecretKey)
 
-app.get("/store", (req, res) => {
+app.get("/", (req, res) => {
   fs.readFile("items.json", (error, data) => {
     error
       ? res.status(500).end()
